@@ -1,0 +1,25 @@
+{
+  "name": "travel-info",
+  "version": "1.0.0",
+  "description": "Travel Info Bot",
+  "main": "travelInfoBot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wrecodde/travelinfo-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wrecodde/travelinfo-bot/issues"
+  },
+  "homepage": "https://github.com/wrecodde/travelinfo-bot#readme",
+  "dependencies": {
+    "botbuilder": "^3.13.1",
+    "dotenv-extended": "^2.9.0",
+    "request-promise": "^4.2.6",
+    "restify": "^8.5.1"
+  }
+}

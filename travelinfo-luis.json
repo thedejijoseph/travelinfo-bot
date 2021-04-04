@@ -1,0 +1,879 @@
+{
+  "luis_schema_version": "7.0.0",
+  "intents": [
+    {
+      "name": "GetConnectedTerminals",
+      "features": []
+    },
+    {
+      "name": "Greetings",
+      "features": [
+        {
+          "featureName": "Hi",
+          "isRequired": false
+        }
+      ]
+    },
+    {
+      "name": "None",
+      "features": []
+    }
+  ],
+  "entities": [
+    {
+      "name": "dest_state",
+      "children": [],
+      "roles": [],
+      "features": []
+    },
+    {
+      "name": "from_state",
+      "children": [],
+      "roles": [],
+      "features": []
+    }
+  ],
+  "hierarchicals": [],
+  "composites": [],
+  "closedLists": [],
+  "prebuiltEntities": [],
+  "utterances": [
+    {
+      "text": "add location to favorites",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "barbecue restaurant closest to my location",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "best asian massage near redmond wa",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "best barbecue near me",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "best chinese restaurants near me",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "best happy hour food in lamesa california",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "best italian food nearby",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "best italian restaurant in salt lake city utah",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "best lunch in charleston south carolina",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "best lunch restaurant in boulder city nevada",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "best mexican food in san angelo",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "best nearby restaurants",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "breakfast cafes nearby",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "breakfast restaurants in downtown frederick maryland",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "bus from bauchi to abuja",
+      "intent": "GetConnectedTerminals",
+      "entities": [
+        {
+          "entity": "from_state",
+          "startPos": 9,
+          "endPos": 14,
+          "children": []
+        },
+        {
+          "entity": "dest_state",
+          "startPos": 19,
+          "endPos": 23,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "chinese buffet all you can eat in stockport",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "chinese restaurant woolton village liverpool",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "comic book stores in frisco texas",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "display map for sacramento plastic surgery",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "distance between my home to tesco",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "eye glasses in kirkland washington",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "find barber shop in my location",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "find book stores in a 5 mile radius",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "find h&r block tax services",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "find home depot that takes reservation",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "find hotels in myrtle beach south carolina with two bedroom suites",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "find lounge clubs",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "find lowes store",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "find nail salons in my area",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "find pawn shops on ashland",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "find retro dress shops locations",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "find rio city cafe in old sacramento",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "find seven elevens near me",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "find shoe store in this area",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "find some gas near me",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "find some good coffee shop nearby",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "find some good restaurants in acapulco",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "find some nearby cheap hotel",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "find some nearby mosques",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "find some restaurants near me",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "find some supermarkets nearby",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "find the closest mexican restaurant that takes reservations",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "find the closest open pizza place",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "find the corner of fifth street and oak street",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "find the marysville washington walk in clinic",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "find the nearest lego store",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "find the nearest open donut place",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "find the nearest westminster library",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "five star italian restaurants near tomball texas",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "good restaurants near here",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "hello",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "how far am i from fifty first avenue and indian school",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "how far away from school am i",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "how far i am from my work place",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "how far is it from here to home",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "how far is it from here to work",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "how far is it from home to new haven missouri",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "how far is it to from here",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "how far is it to mum and dad s house",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "how far is it to street",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "how far is mcdonalds from my home",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "how far is rite aid from acme",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "how far is the home depot from lowe s",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "how far to mom and dad's",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "i need details from ondo to lagos",
+      "intent": "GetConnectedTerminals",
+      "entities": []
+    },
+    {
+      "text": "is there a hospital near me",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "is there an art museum in seattle",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "is there any nearby malls",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "is there any pizza house near here",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "is there any post office within 1 km?",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "is there any restaurant in my area",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "japanese restaurants that are more than 3 stars",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "kosher barbecue restaurant rockville maryland",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "lagos to abuja",
+      "intent": "GetConnectedTerminals",
+      "entities": []
+    },
+    {
+      "text": "let's rate microsoft visitor center 5 stars on google map",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "list five star restaurants in county durham",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "list four star restaurants nearby",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "list of check cashing places near me",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "list of the best restaurants in beijing",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "list the malls in lake charles louisiana",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "list the top 3 closest aquarium near virginia beach virginia",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "list the top 3 shoe stores in town",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "local bars near me",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "local bars that are open now",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "local coffee shops",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "local mexican restaurants",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "local pubs in this area",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "locate nearby pubs",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "locate seekonk movie theater",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "ondo state to lagos state",
+      "intent": "GetConnectedTerminals",
+      "entities": [
+        {
+          "entity": "from_state",
+          "startPos": 0,
+          "endPos": 3,
+          "children": []
+        },
+        {
+          "entity": "dest_state",
+          "startPos": 14,
+          "endPos": 18,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "petrol pumps near me",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "pizza nearby",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "pizza on redmond avenue",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "plateau to nasarawa",
+      "intent": "GetConnectedTerminals",
+      "entities": [
+        {
+          "entity": "from_state",
+          "startPos": 0,
+          "endPos": 6,
+          "children": []
+        },
+        {
+          "entity": "dest_state",
+          "startPos": 11,
+          "endPos": 18,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "propane for barbecue near long beach new york",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "save my location on map",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "save my location to my map",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "steak restaurants open on sundays",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "the address and how to get there",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "the address i want the address",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "vietnamese pho soup nearby",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what is the address for my bus stop",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what is the distance between my current location and",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what's the cheapest italian restaurant around me",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what's the closest airport near india",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what's the closest coffee place that is open now",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what's the closest coffee shop to me",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what's the closest mountain to cabot arkansas",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what's the closest place for pizza",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what's the closest place to get pizza",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what's the closest target store here",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what's the closest water park in my area",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what's the nearest mcdonald's next to me",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what's the nearest shopping mall in manila",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what's the nearest theater near me",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "where are cinemas nearby",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "where are hair salons in monroeville pa",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "where are motorcycle dealers near me",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "where can i buy a chef jacket in chicago",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "where can i enter nasarawa bus in jos",
+      "intent": "GetConnectedTerminals",
+      "entities": [
+        {
+          "entity": "dest_state",
+          "startPos": 18,
+          "endPos": 25,
+          "children": []
+        },
+        {
+          "entity": "from_state",
+          "startPos": 34,
+          "endPos": 36,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "where can i find free or inexpensive burlap in huntsville alabama",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "where can i find starbucks coffee",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "where can i get a car wash",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "where can i get a cheap scaffold tower",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "where can i get a fish dinner in jacksonville",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "where can i get a pizza nearby",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "where can i get cheap petrol in chorlton",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "where do i get bus to kwara from lagos",
+      "intent": "GetConnectedTerminals",
+      "entities": [
+        {
+          "entity": "dest_state",
+          "startPos": 22,
+          "endPos": 26,
+          "children": []
+        },
+        {
+          "entity": "from_state",
+          "startPos": 33,
+          "endPos": 37,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "where do you take bus from lagos to ondo",
+      "intent": "GetConnectedTerminals",
+      "entities": [
+        {
+          "entity": "from_state",
+          "startPos": 27,
+          "endPos": 31,
+          "children": []
+        },
+        {
+          "entity": "dest_state",
+          "startPos": 36,
+          "endPos": 39,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "where is best to eat in clacton",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "where is bus stop 77",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "where is cheap pizza",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "where is cheap restaurant near me",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "where is good for coffee around here",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "where is good thai food",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "where is good to go in bellevue",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "where is my home address",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "where is parking at navy pier",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "where is the bus park for bauchi in abuja",
+      "intent": "GetConnectedTerminals",
+      "entities": [
+        {
+          "entity": "dest_state",
+          "startPos": 26,
+          "endPos": 31,
+          "children": []
+        },
+        {
+          "entity": "from_state",
+          "startPos": 36,
+          "endPos": 40,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "where is wood foundation repair",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "where to get bus to kano from lagos",
+      "intent": "GetConnectedTerminals",
+      "entities": [
+        {
+          "entity": "dest_state",
+          "startPos": 20,
+          "endPos": 23,
+          "children": []
+        },
+        {
+          "entity": "from_state",
+          "startPos": 30,
+          "endPos": 34,
+          "children": []
+        }
+      ]
+    }
+  ],
+  "versionId": "0.1",
+  "name": "demo-luis",
+  "desc": "",
+  "culture": "en-us",
+  "tokenizerVersion": "1.0.0",
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "phraselists": [
+    {
+      "name": "Hi",
+      "mode": true,
+      "words": "hi,hello",
+      "activated": true,
+      "enabledForAllModels": false
+    }
+  ],
+  "regex_features": [],
+  "patterns": [],
+  "settings": [
+    {
+      "name": "NormalizePunctuation",
+      "value": "true"
+    },
+    {
+      "name": "NormalizeWordForm",
+      "value": "true"
+    }
+  ]
+}
