@@ -14,9 +14,9 @@ const rp = require('request-promise');
 
 const server = restify.createServer();
 server.listen(process.env.port || process.env.PORT || 3978, function () {
-   console.log('%s listening to %s', server.name, server.url); 
+   console.log('%s listening to %s', server.name, server.url);
 });
-  
+
 // Create chat bot
 const connector = new builder.ChatConnector({
     appId: process.env.MICROSOFT_APP_ID,
@@ -33,7 +33,7 @@ server.post('/api/messages', connector.listen());
 // Bots Dialogs
 //=========================================================
 
-const luisModelUrl = 'https://' + process.env.LuisAPIHostName + '/luis/v2.0/apps/' + process.env.LUIS_appId + '?subscription-key=' + process.env.LuisAPIKey;   
+const luisModelUrl = 'https://' + process.env.LuisAPIHostName + '/luis/v2.0/apps/' + process.env.LUIS_appId + '?subscription-key=' + process.env.LuisAPIKey;
 
 var luisRecognizer = new builder.LuisRecognizer(luisModelUrl);
 
@@ -52,61 +52,73 @@ bot.dialog('/sayHi', function(session) {
 });
 
 bot.dialog('/getterminals', [
-    function (session, results, next){
-        let from_state, to_state;
-        const fromState = builder.EntityRecognizer.findEntity(results.entities, 'from_state');
-        if (fromState.type == 'from_state')
-            from_state = fromState.entity
-        
-        const destState = builder.EntityRecognizer.findEntity(results.entities, 'dest_state');
-        if (destState.type == 'dest_state')
-            to_state = destState.entity
-        
-        if (fromState && destState) {
+  function (session, results, next){
+    let from_state, to_state;
+    const fromState = builder.EntityRecognizer.findEntity(results.entities, 'from_state');
+    const destState = builder.EntityRecognizer.findEntity(results.entities, 'dest_state');
 
-           //Show user that we're processing their request by sending the typing indicator
-            session.sendTyping();
-            
-            // Build the url we'll be calling to get the terminal details
-            var url = "https://travelinfo-api-staging.herokuapp.com/resolve/?"
-                        + "from_state=" + from_state + "&dest_state=" + to_state;
-            
-            // Build options for the request
-            var options = {
-                uri: url,
-                json: true // Returns the response in json
-            }
-    //Make the call
-    rp(options).then(function (body){
+    if ((results.entities.length === 0) && (fromState === null) && (destState === null))
+
+      // This is executed, when the user not provided enough parameters
+      session.endDialog("Please rephrase your question! ");
+
+    else if (fromState && destState) {
+
+      from_state = fromState.entity
+      to_state = destState.entity
+
+      //Show user that we're processing their request by sending the typing indicator
+      session.sendTyping();
+
+      // Build the url we'll be calling to get the terminal details
+      var url = "https://travelinfo-api-staging.herokuapp.com/resolve/?"
+                + "from_state=" + from_state + "&dest_state=" + to_state;
+
+      // Build options for the request
+      var options = {
+        uri: url,
+        json: true // Returns the response in json
+      }
+
+      //Make the call
+      rp(options).then(function (body){
+        let success = body["success"];
+
         // The request is successful
-        terminalDetails(session, results, body);
-    }).catch(function (err){
+        if(success)
+          terminalDetails(session, results, body);
+        else
+          session.send(body["message"]);
+      }).catch(function (err){
+
         // An error occurred and the request failed
         console.log(err.message);
-        session.send("Sorry, Currently service unavailable in this state. :( Try again?");
-    }).finally(function () {
+        session.send("Oops, something went wrong. :( Try again?");
+      }).finally(function () {
+
         // This is executed at the end, regardless of whether the request is successful or not
         session.endDialog();
-    });
-        } else {
-            // This is executed, when the user not provided enough parameters
-            session.endDialog("Please enter source and destination places to continue");
-        }
+      });
     }
+    else
+    {
+      // This is executed, when the user not provided enough parameters
+      session.endDialog("Sorry, I didn't understand what you said. Please rephrase it :)");
+    }
+  }
 ]);
 
-// This function processes the results from the API call 
+// This function processes the results from the API call
 function terminalDetails(session, results, body){
+  session.send(body["message"]);
 
-    session.send("Terminal Details : ");
-    
-    // Count the length of the response results
-    resultsInfoLength = body.data.length;
-    
-    // Iterate through all response results returned by the API
-    for(let i=0; i<resultsInfoLength; i++)
-    {
-        session.send(body["data"][i]["terminal"]);
-        session.send(body["data"][i]["description"]);
-    }
+  // Count the length of the response results
+  resultsInfoLength = body.data.length;
+
+  // Iterate through all response results returned by the API
+  for(let i=0; i<resultsInfoLength; i++)
+  {
+    session.send(body["data"][i]["terminal"]);
+    session.send(body["data"][i]["description"]);
+  }
 }
