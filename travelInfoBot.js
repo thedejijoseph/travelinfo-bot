@@ -118,7 +118,6 @@ function terminalDetails(session, results, body){
   // Iterate through all response results returned by the API
   for(let i=0; i<resultsInfoLength; i++)
   {
-    session.send(body["data"][i]["terminal"]);
-    session.send(body["data"][i]["description"]);
+    session.send(body["data"][i]["terminal"] + ':\n\n' + body["data"][i]["description"]);
   }
 }
