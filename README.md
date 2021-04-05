@@ -22,7 +22,7 @@ Once we imported the application we need to "train" the model ([Training](https:
 
 #### Application ID and Endpoint Key
 
-We need these two values to configure the code in your application:
+We need these two values to configure the code in the application:
 
 1. Application ID
 
