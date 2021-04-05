@@ -4,6 +4,8 @@ require('dotenv-extended').load();
 const restify = require('restify');
 const builder = require('botbuilder');
 const rp = require('request-promise');
+const spellService = require('./spell-service');
+
 
 //=========================================================
 // Bot Setup
@@ -107,6 +109,24 @@ bot.dialog('/getterminals', [
     }
   }
 ]);
+
+// Spell Check
+if (process.env.IS_SPELL_CORRECTION_ENABLED === 'true') {
+    bot.use({
+        botbuilder: (session, next) => {
+            spellService
+                .getCorrectedText(session.message.text)
+                .then(text => {
+                    session.message.text = text;
+                    next();
+                })
+                .catch(error => {
+                    console.error(error);
+                    next();
+                });
+        }
+    });
+}
 
 // This function processes the results from the API call
 function terminalDetails(session, results, body){
