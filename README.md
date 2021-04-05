@@ -41,7 +41,7 @@ Check out the [reference](https://dev.cognitive.microsoft.com/docs/services/56e7
 
 [spell-service.js](spell-service.js) is the component to call the Bing Spell Check RESTful API for correcting the mispelled words.
 
-In this Bot we added spell correction as a middleware. Check out the middleware in [travelInfoBot.js](app.js#L114-L129).
+In this Bot we added spell correction as a middleware. Check out the middleware in [app.js](app.js#L114-L129).
 
 ## Code Highlights
 
