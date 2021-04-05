@@ -34,11 +34,20 @@ We need these two values to configure the code in the application:
     Once your app is published, copy the endpoint key from the application resources on the Publish App page.
     
     
+### Spelling Correction
+
+Microsoft Bing Spell Check API provides a module that allows you to to correct the spelling of the text. 
+Check out the [reference](https://dev.cognitive.microsoft.com/docs/services/56e73033cf5ff80c2008c679/operations/56e73036cf5ff81048ee6727) to know about the modules available.
+
+[spell-service.js](spell-service.js) is the component to call the Bing Spell Check RESTful API for correcting the mispelled words.
+
+In this Bot we added spell correction as a middleware. Check out the middleware in [travelInfoBot.js](app.js#L114-L129).
+
 ## Code Highlights
 
 This application has an intent: GetConnectedTerminals .It detects from_state entity and an dest_state entity. Each intent has a handler method accepts a result from LUIS including the matching Intents and Entities for the LUIS query. 
 
-The Bot has the LuisRecognizer that is pointed to the model and then passing that recognizer to an IntentDialog using the Recognizer plugins which detect intention from user messages. Calls the API in backend with matching entities (source and destination states) to get the terminal details based on the user intent.
+The Bot has the LuisRecognizer that is pointed to the model and then passing that recognizer to an IntentDialog using the Recognizer plugins which detect intention from user messages. Calls the API in backend with matching entities (source and destination states) to get the terminal details based on the user intent. We also added a spell Correction as a middleware for the mispelled words.
 
 
 ### Reference links
@@ -48,3 +57,5 @@ The Bot has the LuisRecognizer that is pointed to the model and then passing tha
 - Bot Samples for Nodejs [Link](https://github.com/Microsoft/BotBuilder/tree/master/Node/examples)
 - More Bot Samples [Link](https://github.com/Microsoft/BotBuilder-Samples)
 - Lots of Bot resources [Link](https://aka.ms/botresources)
+
+
