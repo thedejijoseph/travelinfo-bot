@@ -41,7 +41,7 @@ This application has an intent: GetConnectedTerminals .It detects from_state ent
 The Bot has the LuisRecognizer that is pointed to the model and then passing that recognizer to an IntentDialog using the Recognizer plugins which detect intention from user messages. Calls the API in backend with matching entities (source and destination states) to get the terminal details based on the user intent.
 
 
-### Additional reference links
+### Reference links
 
 - Microsoft Bot Framework documentation [Link](https://docs.botframework.com/en-us/)
 - Full LUIS documentation [Link](https://www.luis.ai/help)
